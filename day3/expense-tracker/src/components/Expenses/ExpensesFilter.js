@@ -5,6 +5,7 @@ import './ExpensesFilter.css';
 const ExpensesFilter = (props) => {
     //const [state,setState] = useState('');
     const ChangeHandlerDropDown = (event) => {
+        //console.log(event.target.value)
         props.onChangeFilter(event.target.value);
     };
   

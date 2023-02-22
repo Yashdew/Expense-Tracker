@@ -3,6 +3,7 @@ import Cards from "../UI/Cards";
 import ExpensesFilter from "./ExpensesFilter";
 import { useState } from "react";
 import ExpenseList from "./ExpenseList";
+import ExpenseChart from "./ExpenseChart";
 
 const ExpenseComponents = (props) => {
   
@@ -33,8 +34,9 @@ const ExpenseComponents = (props) => {
         
         {/* Add filter Components */}
         <Cards className="expenses">
-        <ExpensesFilter selected = {filterYear} onChangeFilter = {filterYearChangehandler}/>
         
+        <ExpensesFilter selected = {filterYear} onChangeFilter = {filterYearChangehandler}/>
+        <ExpenseChart expenses={filteredExpenses} />
         {/* {expenseContent} */}
         {/* { filteredExpenses.length === 0 && <p>No expense found</p>}
         { filteredExpenses.length > 0 && (filteredExpenses.map( (expense,index) => <ExpenseItem 
